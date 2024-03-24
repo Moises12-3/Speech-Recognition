@@ -5,7 +5,8 @@ const textArea = document.getElementById('textArea');
 const recognition = new webkitSpeechRecognition();
 
 recognition.continuous = true;
-recognition.lang = 'es-ES';
+// recognition.lang = 'es-ES';
+recognition.lang = 'en-US'; // Cambiado a inglés
 recognition.interimResult = false;
 
 btnStart.addEventListener('click', () => {
@@ -27,7 +28,8 @@ function leerTexto(text) {
     speech.volume = 1;
     speech.rate = 0.2;
     speech.pitch = 0.1;
-    speech.lang = 'es-ES'
+    //speech.lang = 'es-ES'
+    recognition.lang = 'en-US'; // Cambiado a inglés
 
     window.speechSynthesis.speak(speech);
 }
